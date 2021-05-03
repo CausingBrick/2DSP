@@ -1,4 +1,4 @@
-package 2DSP
+package main
 
 func MaxFloat64(nums ...float64) float64 {
 	m := nums[0]
