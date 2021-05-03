@@ -16,8 +16,19 @@ func BottomLeftFirst() {
 	// )
 
 }
-func moveToInitialPosition(srtip *Strip)float64{
+func moveToInitialPosition(srtip *Strip,pol *Polygon)float64{
 	// 首先判断条带内是否摆放待排件
+	if len(strip.Obejcts) == 0 {
+		// strip中未排放多边形
+		var (
+			disX float64
+			disY float64
+		)
+		disX = MinX(pol.Vertices[0].X) - 0
+		disY = MaxY(pol.Vertices[0].Y) - 0
+	}
+	
+
 	
 }
 func getShiftY(strip *Strip, pol *Polygon) float64 {
