@@ -1,4 +1,4 @@
-package 2DSP
+package main
 
 import (
 	"container/list"
@@ -9,14 +9,10 @@ type Point struct {
 	X float64
 	Y float64
 }
+
 type Object struct {
 	Hight float64
 }
-
-// type Node struct {
-// 	Data Point
-// 	Next *Node
-// }
 
 func NewPoint(x, y float64) *Point {
 	return &Point{x, y}
@@ -74,7 +70,7 @@ func (p *Polygon) MinX() float64 {
 }
 
 func (p *Polygon) MinY() float64 {
-	min := p.Vertices[1].Y
+	min := p.Vertices[0].Y
 	for _, v := range p.Vertices {
 		if min > v.Y {
 			min = v.Y
@@ -109,10 +105,11 @@ type Strip struct {
 	Sp      *Point
 	Obejcts []*Polygon
 }
-// 获取多边形最右值点的x值
-func (s *Strip) MaxX() float64 {
-	max := s.Obejcts[0].Vertices[0].X
 
+// MaxX 获取多边形最右值点的x值
+func (s *Strip) MaxX() float64 {
+
+	max := s.Obejcts[0].Vertices[0].X
 	for _, v := range s.Obejcts[0].Vertices {
 		if max < v.X {
 			max = v.X

@@ -1,4 +1,4 @@
-package 2DSP
+package main
 
 func BottomLeftFirst() {
 	// var (
@@ -16,9 +16,9 @@ func BottomLeftFirst() {
 	// )
 
 }
-func moveToInitialPosition(srtip *Strip)float64{
+func moveToInitialPosition(srtip *Strip) float64 {
 	// 首先判断条带内是否摆放待排件
-	
+
 }
 func getShiftY(strip *Strip, pol *Polygon) float64 {
 	// 首先将待排件平移到strip外

@@ -1,4 +1,4 @@
-package 2DSP
+package main
 
 func main() {
 
